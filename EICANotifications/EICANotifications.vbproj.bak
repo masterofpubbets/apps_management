@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6796E425-BCAA-4652-AD8D-604016D44B3B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>TRCoManagementSystem.My.MyApplication</StartupObject>
+    <RootNamespace>TRCoManagementSystem</RootNamespace>
+    <AssemblyName>TRCoManagementSystem</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>TRCoManagementSystem.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>TRCoManagementSystem.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>agency.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v16.1.Core, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\AppUpdates.vb" />
+    <Compile Include="Classes\Employee.vb" />
+    <Compile Include="Classes\Groups.vb" />
+    <Compile Include="Classes\Nationality.vb" />
+    <Compile Include="Classes\Notifications.vb" />
+    <Compile Include="Classes\PHPService.vb" />
+    <Compile Include="Classes\Positions.vb" />
+    <Compile Include="Classes\Projects.vb" />
+    <Compile Include="Classes\SteelStructure.vb" />
+    <Compile Include="Forms\AppUpdates\frmAddUpdate.Designer.vb">
+      <DependentUpon>frmAddUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AppUpdates\frmAddUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employee\frmAddEmp.Designer.vb">
+      <DependentUpon>frmAddEmp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employee\frmAddEmp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employee\frmEditEmp.Designer.vb">
+      <DependentUpon>frmEditEmp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employee\frmEditEmp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employee\frmEmp.Designer.vb">
+      <DependentUpon>frmEmp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employee\frmEmp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AppUpdates\frmAppUpdates.Designer.vb">
+      <DependentUpon>frmAppUpdates.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AppUpdates\frmAppUpdates.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Groups\frmEditGroup.Designer.vb">
+      <DependentUpon>frmEditGroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Groups\frmEditGroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Groups\frmAddGroup.Designer.vb">
+      <DependentUpon>frmAddGroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Groups\frmAddGroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Groups\frmGroups.Designer.vb">
+      <DependentUpon>frmGroups.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Groups\frmGroups.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Home\FrmHome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Home\FrmHome.Designer.vb">
+      <DependentUpon>FrmHome.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Notifications\frmAddNotification.Designer.vb">
+      <DependentUpon>frmAddNotification.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Notifications\frmAddNotification.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Notifications\frmNotManagement.Designer.vb">
+      <DependentUpon>frmNotManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Notifications\frmNotManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Positions\frmAddPosition.Designer.vb">
+      <DependentUpon>frmAddPosition.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Positions\frmAddPosition.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Positions\frmPositions.Designer.vb">
+      <DependentUpon>frmPositions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Positions\frmPositions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Positions\frmSelect_Pos.Designer.vb">
+      <DependentUpon>frmSelect_Pos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Positions\frmSelect_Pos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Projects\frmAddProject.Designer.vb">
+      <DependentUpon>frmAddProject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Projects\frmAddProject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Projects\frmEditProject.Designer.vb">
+      <DependentUpon>frmEditProject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Projects\frmEditProject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Projects\frmProject.Designer.vb">
+      <DependentUpon>frmProject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Projects\frmProject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Projects\frmSelectProject.Designer.vb">
+      <DependentUpon>frmSelectProject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Projects\frmSelectProject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\frmP6Summary.Designer.vb">
+      <DependentUpon>frmP6Summary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\frmP6Summary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Steel Structure\frmSSMaterial.Designer.vb">
+      <DependentUpon>frmSSMaterial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Steel Structure\frmSSMaterial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\mMain.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AppUpdates\frmAddUpdate.resx">
+      <DependentUpon>frmAddUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employee\frmAddEmp.resx">
+      <DependentUpon>frmAddEmp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employee\frmEditEmp.resx">
+      <DependentUpon>frmEditEmp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employee\frmEmp.resx">
+      <DependentUpon>frmEmp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AppUpdates\frmAppUpdates.resx">
+      <DependentUpon>frmAppUpdates.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Groups\frmEditGroup.resx">
+      <DependentUpon>frmEditGroup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Groups\frmAddGroup.resx">
+      <DependentUpon>frmAddGroup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Groups\frmGroups.resx">
+      <DependentUpon>frmGroups.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Home\FrmHome.resx">
+      <DependentUpon>FrmHome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Notifications\frmAddNotification.resx">
+      <DependentUpon>frmAddNotification.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Notifications\frmNotManagement.resx">
+      <DependentUpon>frmNotManagement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Positions\frmAddPosition.resx">
+      <DependentUpon>frmAddPosition.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Positions\frmPositions.resx">
+      <DependentUpon>frmPositions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Positions\frmSelect_Pos.resx">
+      <DependentUpon>frmSelect_Pos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Projects\frmAddProject.resx">
+      <DependentUpon>frmAddProject.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Projects\frmEditProject.resx">
+      <DependentUpon>frmEditProject.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Projects\frmProject.resx">
+      <DependentUpon>frmProject.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Projects\frmSelectProject.resx">
+      <DependentUpon>frmSelectProject.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\frmP6Summary.resx">
+      <DependentUpon>frmP6Summary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Steel Structure\frmSSMaterial.resx">
+      <DependentUpon>frmSSMaterial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eica icon Gold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agency.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="agency.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
